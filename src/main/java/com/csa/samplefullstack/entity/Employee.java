@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="tbl_Employee")
 public class Employee {
@@ -13,12 +14,12 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int employeeId;
+    private long employeeId;
     private String name;
     private String department;
     private String location;
     
-    public Employee(int employeeId, String name, String department, String location) {
+    public Employee(long employeeId, String name, String department, String location) {
         this.employeeId = employeeId;
         this.name = name;
         this.department = department;
@@ -29,10 +30,10 @@ public class Employee {
 
     }
 
-    public int getEmployeeId() {
+    public long getEmployeeId() {
         return employeeId;
     }
-    public void setEmployeeId(int employeeId) {
+    public void setEmployeeId(long employeeId) {
         this.employeeId = employeeId;
     }
     public String getName() {

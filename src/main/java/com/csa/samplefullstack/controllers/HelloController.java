@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class HelloController {
     
     @RequestMapping("/hello")
     public String hello() {
-        return "hello springboots!";
+        return "Hello from Spring!";
     }
 }
