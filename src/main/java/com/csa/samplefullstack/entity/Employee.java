@@ -11,8 +11,8 @@ import javax.persistence.Table;
 @Table(name="tbl_Employee")
 public class Employee {
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
+    
 
     private long employeeId;
     private String name;
@@ -29,6 +29,9 @@ public class Employee {
     public Employee() {
 
     }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     public long getEmployeeId() {
         return employeeId;
